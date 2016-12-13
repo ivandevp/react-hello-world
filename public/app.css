@@ -9,3 +9,18 @@ body {
 	width: 100%;
 	text-align: center;
 }
+
+#container label {
+	display: block;
+}
+
+.username {
+	padding: 10px;
+	border: none;
+	border-bottom: solid 2px #c9c9c9;
+}
+
+.username:focus {
+	outline: none;
+	border-bottom: solid 2px #2980b9;
+}
