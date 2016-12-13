@@ -1,0 +1,11 @@
+body {
+	font-family: 'Shadows Into Light', cursive;
+	background-color: #ecf0f1;
+	color: #2980b9; 
+	font-size: 2em;
+}
+
+#container {
+	width: 100%;
+	text-align: center;
+}
