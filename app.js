@@ -20485,21 +20485,40 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var FirstComponent = function (_React$Component) {
   _inherits(FirstComponent, _React$Component);
 
-  function FirstComponent() {
+  function FirstComponent(props) {
     _classCallCheck(this, FirstComponent);
 
-    return _possibleConstructorReturn(this, (FirstComponent.__proto__ || Object.getPrototypeOf(FirstComponent)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (FirstComponent.__proto__ || Object.getPrototypeOf(FirstComponent)).call(this, props));
+
+    _this.state = { name: '...' };
+    return _this;
   }
 
   _createClass(FirstComponent, [{
+    key: 'changeName',
+    value: function changeName(e) {
+      var name = e.target.value;
+      this.setState({ name: name });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'h1',
+        'div',
         null,
-        'Hello ',
-        this.props.name,
-        '!'
+        _react2.default.createElement(
+          'label',
+          null,
+          'Enter your name:'
+        ),
+        _react2.default.createElement('input', { type: 'text', className: 'username', onChange: this.changeName.bind(this) }),
+        _react2.default.createElement(
+          'h1',
+          null,
+          'Hello ',
+          this.state.name,
+          '!'
+        )
       );
     }
   }]);
@@ -20507,6 +20526,6 @@ var FirstComponent = function (_React$Component) {
   return FirstComponent;
 }(_react2.default.Component);
 
-_reactDom2.default.render(_react2.default.createElement(FirstComponent, { name: 'Iv\xE1n' }), document.getElementById('container'));
+_reactDom2.default.render(_react2.default.createElement(FirstComponent, null), document.getElementById('container'));
 
 },{"react":182,"react-dom":2}]},{},[183]);
