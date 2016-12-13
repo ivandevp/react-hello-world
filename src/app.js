@@ -9,8 +9,8 @@
 
  class FirstComponent extends React.Component {
  	render() {
- 		return <h1>Hello world!</h1>
+ 		return <h1>Hello {this.props.name}!</h1>
  	}
  }
 
- ReactDOM.render(<FirstComponent />, document.getElementById('container'));
+ ReactDOM.render(<FirstComponent name="Iván"/>, document.getElementById('container'));
