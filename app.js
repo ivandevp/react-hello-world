@@ -20497,7 +20497,9 @@ var FirstComponent = function (_React$Component) {
       return _react2.default.createElement(
         'h1',
         null,
-        'Hello world!'
+        'Hello ',
+        this.props.name,
+        '!'
       );
     }
   }]);
@@ -20505,6 +20507,6 @@ var FirstComponent = function (_React$Component) {
   return FirstComponent;
 }(_react2.default.Component);
 
-_reactDom2.default.render(_react2.default.createElement(FirstComponent, null), document.getElementById('container'));
+_reactDom2.default.render(_react2.default.createElement(FirstComponent, { name: 'Iv\xE1n' }), document.getElementById('container'));
 
 },{"react":182,"react-dom":2}]},{},[183]);
